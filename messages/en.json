@@ -10,7 +10,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Ahmed Mostafa",
-    "roles": ["Senior Frontend Developer", "React.js / Next.js Specialist", "UI/UX Enthusiast"],
+    "roles": ["Senior Frontend Developer", "React.js / Next.js Specialist", "UI/UX Enthusiast", "AI Integration Engineer", "Web Performance Expert", "Firebase & Google Services Specialist"],
     "location": "Cairo, Egypt",
     "summary": "Impact-driven Senior Frontend Developer specializing in the React.js and Next.js ecosystem. Proven track record of architecting scalable enterprise applications, optimizing web performance, and mentoring engineering teams.",
     "cta": "View My Work",
