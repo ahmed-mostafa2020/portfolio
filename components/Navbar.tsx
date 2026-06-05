@@ -64,10 +64,17 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#hero"
-            className="text-lg font-bold gradient-text tracking-tight"
-            aria-label="Ahmed Mostafa - Home"
+            className="flex items-center gap-2.5 group cursor-pointer"
+            aria-label={`${t("hero.name") as string} - Home`}
           >
-            AM<span className="text-text-muted">.</span>
+            <img
+              src="/logo.svg"
+              alt="Logo"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="text-base sm:text-lg font-bold text-text-primary tracking-tight">
+              {t("hero.name") as string}
+            </span>
           </a>
 
           {/* Desktop Navigation */}

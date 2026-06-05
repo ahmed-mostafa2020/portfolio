@@ -41,7 +41,7 @@ const experiences: ExperienceEntry[] = [
   {
     roleKey: "guestna",
     isLeft: true,
-    techTags: ["Next.js 14", "TanStack Query", "Redux", "PWA", "next-intl", "Sentry", "GA4"],
+    techTags: ["Next.js 14", "TanStack Query", "Redux", "PWA", "next-intl", "Sentry", "GA4", "Apple Pay"],
   },
   {
     roleKey: "arabiaIt",
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
 
           {/* Timeline Entries */}
           <div className="space-y-12 md:space-y-16">
-            {experiences.map((exp, index) => {
+            {experiences.map((exp) => {
               const title = t(`experience.roles.${exp.roleKey}.title`) as string;
               const company = t(`experience.roles.${exp.roleKey}.company`) as string;
               const period = t(`experience.roles.${exp.roleKey}.period`) as string;
@@ -150,7 +150,7 @@ export default function ExperienceSection() {
                               key={i}
                               className="text-text-secondary text-sm leading-relaxed flex gap-2"
                             >
-                              <span className="text-accent-cyan mt-1.5 shrink-0 w-1 h-1 rounded-full bg-accent-cyan inline-block" />
+                              <span className="shrink-0 w-1.5 h-1.5 mt-1.5 rounded-full bg-accent-cyan" aria-hidden="true" />
                               <span>{bullet}</span>
                             </li>
                           ))}
@@ -179,7 +179,8 @@ export default function ExperienceSection() {
                         {exp.techTags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-0.5 text-xs text-text-muted bg-surface border border-glass-border rounded-md"
+                            className="px-2 py-0.5 text-xs text-text-muted border border-glass-border rounded-md"
+                            style={{ background: "var(--surface)" }}
                           >
                             {tag}
                           </span>

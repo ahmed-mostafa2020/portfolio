@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import TechStackSection from "@/components/TechStackSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import EducationSection from "@/components/EducationSection";
 import Footer from "@/components/Footer";
 
 // ========================================
@@ -26,6 +27,7 @@ export default function Home() {
         <TechStackSection />
         <ExperienceSection />
         <ProjectsSection />
+        <EducationSection />
       </main>
 
       {/* Footer */}

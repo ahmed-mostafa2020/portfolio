@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 
 // ========================================
@@ -23,6 +23,14 @@ function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
+function WhatsappIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12.031 2c-5.514 0-10 4.486-10 10 0 1.944.562 3.757 1.533 5.29L2.03 22l4.898-1.579C8.36 21.372 10.122 22 12.031 22c5.514 0 10-4.486 10-10s-4.486-10-10-10zm0 18c-1.636 0-3.15-.478-4.433-1.297l-.317-.202-2.905.937.954-2.827-.221-.351C4.28 15.01 3.793 13.57 3.793 12c0-4.542 3.695-8.238 8.238-8.238 4.542 0 8.238 3.696 8.238 8.238 0 4.542-3.696 8.238-8.238 8.238zm4.72-6.146c-.258-.129-1.529-.755-1.765-.841-.237-.086-.409-.129-.58.129-.172.258-.667.841-.818 1.014-.15.172-.301.194-.56.064-.258-.129-1.092-.403-2.08-1.283-.77-.687-1.29-1.536-1.44-1.795-.15-.258-.016-.398.113-.527.116-.116.258-.301.387-.452.129-.15.172-.258.258-.43.086-.172.043-.323-.021-.452-.064-.129-.58-1.398-.795-1.914-.21-.506-.419-.438-.58-.446l-.494-.008c-.172 0-.452.064-.688.323-.237.258-.903.882-.903 2.15 0 1.269.925 2.495 1.054 2.667.129.172 1.82 2.779 4.41 3.894.616.265 1.096.423 1.471.543.619.197 1.183.169 1.629.102.497-.075 1.529-.624 1.744-1.226.215-.602.215-1.118.15-1.226-.064-.11-.236-.173-.494-.302z"/>
+    </svg>
+  );
+}
+
 // ========================================
 // Social Links Data
 // ========================================
@@ -30,26 +38,26 @@ const contactLinks = [
   {
     icon: GithubIcon,
     href: "https://github.com/ahmed-mostafa2020",
-    label: "GitHub",
+    labelKey: "footer.github",
     display: "github.com/ahmed-mostafa2020",
   },
   {
     icon: LinkedinIcon,
     href: "https://linkedin.com/in/ahmed-mostafa-406238234/",
-    label: "LinkedIn",
+    labelKey: "footer.linkedin",
     display: "LinkedIn",
   },
   {
     icon: Mail,
     href: "mailto:ahmostafa054@gmail.com",
-    label: "Email",
+    labelKey: "footer.email",
     display: "ahmostafa054@gmail.com",
   },
   {
-    icon: Phone,
-    href: "tel:+201018658665",
-    label: "Phone",
-    display: "+20 101 865 8665",
+    icon: WhatsappIcon,
+    href: "https://wa.me/201018658666",
+    labelKey: "footer.whatsapp",
+    display: "01018658666",
   },
 ];
 
@@ -85,20 +93,21 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {contactLinks.map((link) => {
               const Icon = link.icon;
+              const translatedLabel = t(link.labelKey) as string;
               return (
                 <a
-                  key={link.label}
+                  key={link.labelKey}
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="flex items-center gap-3 p-4 rounded-xl text-text-secondary hover:text-text-primary bg-surface hover:bg-surface-hover border border-glass-border hover:border-glass-border-hover transition-all duration-300 group"
-                  aria-label={link.label}
+                  aria-label={translatedLabel}
                 >
                   <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-400/10 to-blue-500/10 group-hover:from-cyan-400/20 group-hover:to-blue-500/20 transition-all duration-300">
                     <Icon className="w-5 h-5 text-accent-cyan" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs text-text-muted font-medium">{link.label}</p>
+                    <p className="text-xs text-text-muted font-medium">{translatedLabel}</p>
                     <p className="text-sm truncate">{link.display}</p>
                   </div>
                 </a>
