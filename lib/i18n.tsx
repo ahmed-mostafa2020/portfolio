@@ -45,6 +45,19 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 // ========================================
+// Helper: apply theme to html element
+// ========================================
+const applyTheme = (newTheme: Theme) => {
+  if (typeof document !== "undefined") {
+    if (newTheme === "light") {
+      document.documentElement.classList.add("light");
+    } else {
+      document.documentElement.classList.remove("light");
+    }
+  }
+};
+
+// ========================================
 // Provider
 // ========================================
 export function I18nProvider({ children }: { children: ReactNode }) {
@@ -55,18 +68,11 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const savedTheme = localStorage.getItem("portfolio-theme") as Theme | null;
     if (savedTheme && (savedTheme === "dark" || savedTheme === "light")) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setTheme(savedTheme);
       applyTheme(savedTheme);
     }
   }, []);
-
-  const applyTheme = (newTheme: Theme) => {
-    if (newTheme === "light") {
-      document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-    }
-  };
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {

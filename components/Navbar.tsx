@@ -45,6 +45,20 @@ export default function Navbar() {
     setLocale(locale === "en" ? "ar" : "en");
   };
 
+  const handleMobileLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      }, 350);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -149,7 +163,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleMobileLinkClick(e, link.href)}
                   className="block px-4 py-3 text-text-secondary hover:text-text-primary rounded-lg hover:bg-surface-hover transition-all duration-200"
                 >
                   {t(link.key) as string}
