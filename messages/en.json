@@ -42,7 +42,7 @@
         "bullets": [
           "Architected an enterprise-grade migration to Next.js 14 (App Router) with PWA support, achieving a 35% improvement in Lighthouse performance scores and full offline usability.",
           "Engineered an efficient data synchronization and caching layer for B2B and B2C portals, reducing redundant API queries by 40% through TanStack Query alongside Redux Persist.",
-          "Spearheaded a fully localized, multilingual platform (EN/AR/FR) with comprehensive RTL support, increasing user acquisition in regional GCC markets by 25%.",
+          "Spearheaded a fully localized, multilingual platform (EN/AR) with comprehensive RTL support, increasing user acquisition in regional GCC markets by 25%.",
           "Optimized marketing tracking and SEO by integrating GA4, GTM, and Geolocation-based routing, boosting organic traffic by 30%.",
           "Secured application boundaries against XSS attacks, achieving strict PCI compliance via Next.js proxy route handlers and CSP middleware for Apple Pay integrations.",
           "Enhanced production observability, decreasing MTTR of critical UI anomalies by 45% through end-to-end Sentry tracing and automated sourcemap uploads."
