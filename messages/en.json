@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "home": "Home",
+    "techStack": "Tech Stack",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Ahmed Mostafa",
+    "roles": ["Senior Frontend Developer", "React.js / Next.js Specialist", "UI/UX Enthusiast"],
+    "location": "Cairo, Egypt",
+    "summary": "Impact-driven Senior Frontend Developer specializing in the React.js and Next.js ecosystem. Proven track record of architecting scalable enterprise applications, optimizing web performance, and mentoring engineering teams.",
+    "cta": "View My Work",
+    "downloadCv": "Download CV"
+  },
+  "techStack": {
+    "title": "Tech Stack & Tools",
+    "subtitle": "Technologies I use to bring ideas to life",
+    "categories": {
+      "core": "Core Technologies",
+      "stateData": "State & Data Fetching",
+      "uiStyling": "UI & Styling",
+      "architecture": "Architecture & Performance",
+      "backend": "Backend & Ecosystem",
+      "tools": "Tools & DevOps",
+      "ai": "AI Development"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My career journey and key achievements",
+    "present": "Present",
+    "roles": {
+      "guestna": {
+        "title": "Senior Frontend Developer",
+        "company": "GuestNa",
+        "period": "Aug 2024 – Present",
+        "location": "KSA (Remote)",
+        "bullets": [
+          "Architected an enterprise-grade migration to Next.js 14 (App Router) with PWA support, achieving a 35% improvement in Lighthouse performance scores and full offline usability.",
+          "Engineered an efficient data synchronization and caching layer for B2B and B2C portals, reducing redundant API queries by 40% through TanStack Query alongside Redux Persist.",
+          "Spearheaded a fully localized, multilingual platform (EN/AR/FR) with comprehensive RTL support, increasing user acquisition in regional GCC markets by 25%.",
+          "Optimized marketing tracking and SEO by integrating GA4, GTM, and Geolocation-based routing, boosting organic traffic by 30%.",
+          "Secured application boundaries against XSS attacks, achieving strict PCI compliance via Next.js proxy route handlers and CSP middleware for Apple Pay integrations.",
+          "Enhanced production observability, decreasing MTTR of critical UI anomalies by 45% through end-to-end Sentry tracing and automated sourcemap uploads."
+        ],
+        "links": ["guestna-edu.com", "guestna.app"]
+      },
+      "arabiaIt": {
+        "title": "Frontend Developer",
+        "company": "Arabia IT",
+        "period": "Oct 2023 – Aug 2024",
+        "location": "KSA (Remote)",
+        "bullets": [
+          "Developed the governmental \"Saea App\" for the Ministry of Endowments, accelerating administrative workflows by 30% with Next.js and secure REST API integrations.",
+          "Streamlined governmental data collection, reducing user input errors by 25% through a reusable UI component library with robust validation using Formik and Yup.",
+          "Improved cross-device usability and layout stability, decreasing UI-related bug reports by 40% through rigorous debugging and fluid responsive design."
+        ],
+        "links": ["saee.org.sa"]
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of recent work I'm proud of",
+    "viewProject": "View Project",
+    "items": {
+      "waratel": {
+        "title": "Waratel LMS",
+        "description": "A comprehensive Learning Management System with multi-role architecture for Students, Teachers, and Parents. Premium glassmorphic UI with dark mode, automated Arabic/English switching, GA4 analytics, and real-time push notifications via Firebase Cloud Messaging.",
+        "tech": ["Next.js", "TypeScript", "Redux Toolkit", "TanStack Query", "Tailwind CSS", "Firebase", "PWA", "Sentry"],
+        "url": "https://wartel-academy.com/ar",
+        "featured": true
+      },
+      "quran": {
+        "title": "Daily Quran Examination",
+        "description": "A Progressive Web App for daily Quran examinations with custom state hooks, secure authentication flows, decoupled theme resolvers to eliminate UI flickering, and advanced LTR/RTL support.",
+        "tech": ["Next.js", "Tailwind CSS", "Firebase", "TypeScript", "Framer Motion", "PWA"],
+        "url": "http://quran.watawanu.com",
+        "featured": true
+      },
+      "tastyFood": {
+        "title": "Tasty Food",
+        "description": "A comprehensive multi-page application with dynamic English/Arabic language toggling, system-wide dark mode, advanced product filtering, and a reusable component architecture.",
+        "tech": ["Next.js", "REST API", "Formik", "Yup", "Material UI", "SASS"],
+        "url": "https://tasty-food-eta.vercel.app/",
+        "featured": true
+      },
+      "atomica": {
+        "title": "Atomica (Figma Plugin)",
+        "description": "Custom color system generator with AI-driven palette generation, custom-named color collections, and seamless one-click export of styles, variables, and JSON files for developer handoff.",
+        "tech": ["HTML", "CSS", "JavaScript", "Figma API"],
+        "url": "https://www.atomica.design/",
+        "featured": false
+      },
+      "foodly": {
+        "title": "Foodly (E-Commerce)",
+        "description": "Extensive 14-page custom web application built from scratch with Landing, About, Cart, Checkout, Shop, Menu, Testimonials, Contact, and FAQ pages with responsive layouts.",
+        "tech": ["jQuery", "JavaScript", "CSS3", "HTML5"],
+        "url": "https://foodly.amrbdr.com/",
+        "featured": false
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "Academic background",
+    "degree": "Bachelor of Civil Engineering",
+    "university": "Ain Shams University, Cairo, Egypt",
+    "period": "Sep 2015 – Sep 2020"
+  },
+  "footer": {
+    "builtWith": "Built with Next.js & ❤️",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  },
+  "theme": {
+    "dark": "Dark Mode",
+    "light": "Light Mode"
+  }
+}
