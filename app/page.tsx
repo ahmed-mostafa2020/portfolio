@@ -8,6 +8,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import EducationSection from "@/components/EducationSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsapp from "@/components/FloatingWhatsapp";
 
 // ========================================
 // Home Page — Single Page Portfolio
@@ -32,6 +33,9 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating WhatsApp */}
+      <FloatingWhatsapp />
     </I18nProvider>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { MapPin, ArrowDown, Mail } from "lucide-react";
+import { MapPin, ArrowDown, Mail, Download } from "lucide-react";
 import { useTranslation } from "@/lib/i18n";
 
 // ========================================
@@ -20,6 +20,14 @@ function LinkedinIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  );
+}
+
+function WhatsappIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12.031 2c-5.514 0-10 4.486-10 10 0 1.944.562 3.757 1.533 5.29L2.03 22l4.898-1.579C8.36 21.372 10.122 22 12.031 22c5.514 0 10-4.486 10-10s-4.486-10-10-10zm0 18c-1.636 0-3.15-.478-4.433-1.297l-.317-.202-2.905.937.954-2.827-.221-.351C4.28 15.01 3.793 13.57 3.793 12c0-4.542 3.695-8.238 8.238-8.238 4.542 0 8.238 3.696 8.238 8.238 0 4.542-3.696 8.238-8.238 8.238zm4.72-6.146c-.258-.129-1.529-.755-1.765-.841-.237-.086-.409-.129-.58.129-.172.258-.667.841-.818 1.014-.15.172-.301.194-.56.064-.258-.129-1.092-.403-2.08-1.283-.77-.687-1.29-1.536-1.44-1.795-.15-.258-.016-.398.113-.527.116-.116.258-.301.387-.452.129-.15.172-.258.258-.43.086-.172.043-.323-.021-.452-.064-.129-.58-1.398-.795-1.914-.21-.506-.419-.438-.58-.446l-.494-.008c-.172 0-.452.064-.688.323-.237.258-.903.882-.903 2.15 0 1.269.925 2.495 1.054 2.667.129.172 1.82 2.779 4.41 3.894.616.265 1.096.423 1.471.543.619.197 1.183.169 1.629.102.497-.075 1.529-.624 1.744-1.226.215-.602.215-1.118.15-1.226-.064-.11-.236-.173-.494-.302z"/>
     </svg>
   );
 }
@@ -115,6 +123,11 @@ const socialLinks = [
     href: "mailto:ahmostafa054@gmail.com",
     label: "Email",
   },
+  {
+    icon: WhatsappIcon,
+    href: "https://wa.me/201018658666",
+    label: "WhatsApp",
+  },
 ];
 
 // ========================================
@@ -192,14 +205,25 @@ export default function HeroSection() {
           {t("hero.summary") as string}
         </motion.p>
 
-        {/* CTA Button */}
-        <motion.div variants={itemVariants} className="mb-8">
+        {/* CTA Buttons */}
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+        >
           <a
             href="#projects"
-            className="glow-button inline-flex items-center gap-2 px-8 py-3 text-sm sm:text-base font-semibold"
+            className="glow-button inline-flex items-center gap-2 px-8 py-3 text-sm sm:text-base font-semibold w-full sm:w-auto justify-center"
           >
             {t("hero.cta") as string}
             <ArrowDown className="w-4 h-4" />
+          </a>
+          <a
+            href="/Ahmed-Mostafa-Frontend-Developer-Next.js-CV.pdf"
+            download="Ahmed-Mostafa-Frontend-Developer-Next.js-CV.pdf"
+            className="inline-flex items-center gap-2 px-8 py-3 text-sm sm:text-base font-semibold rounded-xl text-text-secondary hover:text-text-primary bg-surface hover:bg-surface-hover border border-glass-border hover:border-glass-border-hover transition-all duration-300 w-full sm:w-auto justify-center"
+          >
+            {t("hero.downloadCv") as string}
+            <Download className="w-4 h-4" />
           </a>
         </motion.div>
 
