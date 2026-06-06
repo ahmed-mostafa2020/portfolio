@@ -23,7 +23,7 @@ export default function Home() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="relative z-10 flex-1">
+      <main className="relative z-10 flex-1 overflow-x-hidden">
         <HeroSection />
         <TechStackSection />
         <ExperienceSection />

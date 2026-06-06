@@ -17,13 +17,13 @@ const sectionVariants = {
 };
 
 const timelineItemVariants = {
-  hidden: (isLeft: boolean) => ({
+  hidden: {
     opacity: 0,
-    x: isLeft ? -40 : 40,
-  }),
+    y: 30,
+  },
   visible: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] as const },
   },
 };
@@ -97,7 +97,6 @@ export default function ExperienceSection() {
               return (
                 <motion.div
                   key={exp.roleKey}
-                  custom={exp.isLeft}
                   variants={timelineItemVariants}
                   initial="hidden"
                   whileInView="visible"
@@ -114,7 +113,7 @@ export default function ExperienceSection() {
 
                   {/* Content Card */}
                   <div
-                    className={`ms-10 md:ms-0 md:w-1/2 ${
+                    className={`ps-10 md:ps-0 md:w-1/2 ${
                       exp.isLeft ? "md:ps-10" : "md:pe-10"
                     }`}
                   >

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "@/lib/i18n";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Official brand SVG path for WhatsApp
 function WhatsappIcon({ className }: { className?: string }) {
@@ -16,10 +16,17 @@ function WhatsappIcon({ className }: { className?: string }) {
 export default function FloatingWhatsapp() {
   const { t, dir } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <div
-      className="fixed bottom-6 right-6 z-40 md:bottom-8 md:right-8 rtl:left-6 rtl:right-auto rtl:md:left-8 flex items-center"
+      className="fixed bottom-6 right-6 z-40 md:bottom-8 md:right-8 rtl:left-6 rtl:right-auto rtl:md:left-8 rtl:md:right-auto flex items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
